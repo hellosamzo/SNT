@@ -18,6 +18,7 @@ import java.net.UnknownHostException;
 
 public class Main {
 
+	// change to command line args..
 	public Main(int choice, String value) {
 		switch (choice) {
 		case 1:
@@ -43,24 +44,27 @@ public class Main {
 	public Main(int choice) throws IOException {
 		switch (choice) {
 		case 4:
-			py();
+			pyWebScrapper();
 			break;
 		}
 	}
 
-	private void py() throws IOException {
+	private void pyWebScrapper() throws IOException {
 		ProcessBuilder builder = new ProcessBuilder(
-	            "cmd.exe", "/c", "cd C:\\Users\\User\\git\\SNT\\S.N.T\\Scripts && test.py");
+				// need to change to work on local scripts directory once script complete
+	            "cmd.exe", "/c", "cd C:\\Users\\User\\git\\SNT\\S.N.T\\Scripts && main.py");
 	        builder.redirectErrorStream(true);
 	        Process p = builder.start();
 	        BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
 	        String line;
 	        while (true) {
 	            line = r.readLine();
-	            if (line == null) { break; }
+	            if (line == null) { 
+	            	break; 
+	            	}
 	            System.out.println(line);
+	     }
 	}
-}
 
 	private void NSLookup(String value) {
 		try {
@@ -83,7 +87,8 @@ public class Main {
 	            socket.connect(new InetSocketAddress("localhost", port), 1000);
 	            socket.close();
 	            System.out.println("Port " + port + " is open");
-	        } catch (Exception ex) {
+	        } 
+	         catch (Exception ex) {
 	        }
 	      }
 	   }
@@ -112,14 +117,15 @@ public class Main {
 	
 	// choice to user, provide testing for args
 	public static void main(String[] args) throws IOException {
-		System.out.println("SAM'S NETWORKING TOOL V1.1\n\nOptions:");
-		System.out.println("1 - NSLOOKUP");
-		System.out.println("2 - PORT SCANNER");
-		System.out.println("3 - PING");
+		System.out.println("SNT V1.1\n\nOptions:");
+		System.out.println("1, IP/DOMAIN - NSLOOKUP");
+		System.out.println("2, IP - PORT SCANNER");
+		System.out.println("3, IP/DOMAIN - PING");
+		System.out.println("4, URL - PYTHON WEB CRAWLER");
 		System.out.println("M - Manual\n");
 		//new Main(1, "cnn.com");
 		new Main(4);
-	//	new Main(2, "localhost");
-	//	new Main(3, "8.8.8.8");
+		//new Main(2, "localhost");
+		//new Main(3, "8.8.8.8");
 	}
 }
