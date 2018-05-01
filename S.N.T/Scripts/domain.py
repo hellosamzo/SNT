@@ -1,6 +1,6 @@
 from urllib.parse import urlparse
 
-# MADE FROM TUTORIAL FROM THE-NEW-BOSTON
+# thanks bucky
 
 # Get domain name (example.com)
 def get_domain_name(url):
