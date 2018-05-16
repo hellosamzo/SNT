@@ -4,8 +4,9 @@ from spoder import Spider
 from domain import *
 from general import *
 
+# Need to implement project name and homepage as args, to be sent from java 
 PROJECT_NAME = 'foods'
-HOMEPAGE = 'http://www.artemisfoods.co.uk/'
+HOMEPAGE = 'http://www.example.co.uk/'
 DOMAIN_NAME = get_domain_name(HOMEPAGE)
 QUEUE_FILE = PROJECT_NAME + '/queue.txt'
 CRAWLED_FILE = PROJECT_NAME + '/crawled.txt'
