@@ -81,7 +81,6 @@ public class Main {
 	private void portScanner(String value) {
 		// check all 1 -> 65,535 ports
 		for (int port = 1; port <= 65535; port++) {
-			// to do - place log4j debug here
 	         try {
 	            Socket socket = new Socket();
 	            socket.connect(new InetSocketAddress("localhost", port), 1000);
@@ -123,8 +122,8 @@ public class Main {
 		System.out.println("3, IP/DOMAIN - PING");
 		System.out.println("4, URL - PYTHON WEB CRAWLER");
 		System.out.println("M - Manual\n");
-		//new Main(1, "cnn.com");
-		new Main(4);
+		//new Main(1, "e.g..com");
+		//new Main(4);
 		//new Main(2, "localhost");
 		//new Main(3, "8.8.8.8");
 	}
