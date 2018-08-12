@@ -1,6 +1,6 @@
 # SNT
-Simple CLI program I'm working on, to understand the networking side of Java and learn some Python.
+Simple networking program in Java which uses JavaFX. 
 
 # TO DO:
-Sort out command line args
-Add more functions
+Sort out pyhton arguments for web scrapper.
+Add more functionality. 
